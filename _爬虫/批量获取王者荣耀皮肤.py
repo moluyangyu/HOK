@@ -1,7 +1,7 @@
 #1.发送请求
 #发送请求的模块（为第三方库，需要在外部安装） pip install requests
 
-import requests 
+import requests
 #解析html代码的工具
 from lxml import etree
 import os
@@ -19,8 +19,8 @@ for h in hero_list_resp.json():
     ename = h.get('ename')
     cname = h.get('cname')
     cnames.append(cname)
-    if not os.path.exists(cname):
-        os.makedirs(cname)
+    #if not os.path.exists(cname):
+        #os.makedirs(cname)
     hero_info_url = f'https://pvp.qq.com/web201605/herodetail/{ename}.shtml'
     hero_info_resp = requests.get(hero_info_url,headers=headers)
     hero_info_resp.encoding = 'gbk'
