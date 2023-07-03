@@ -1,0 +1,17 @@
+#title{
+    text-align: center; 
+    color: black;
+    font-size: xx-large;
+    background-color: cadetblue;
+}
+
+#imageDisplay{
+    margin-left: 400px;
+    position: relative;
+}
+
+body {
+    background:#ffffff
+}
+
+    
