@@ -14,7 +14,7 @@ class BatchRename():
             if item.endswith('.jpg'):
                 src = os.path.join(self.path, item)
                 dst = os.path.join(os.path.abspath(self.path),str(i)+ '.jpg')
-                
+
                 try:
                     os.rename(src, dst)
                     print('converting %s to %s ...' % (src, dst))
@@ -25,7 +25,7 @@ class BatchRename():
             if item.endswith('.txt'):
                 src = os.path.join(self.path, item)
                 dst = os.path.join(os.path.abspath(self.path),str(j)+ '.txt')
-                
+
                 try:
                     os.rename(src, dst)
                     print('converting %s to %s ...' % (src, dst))
