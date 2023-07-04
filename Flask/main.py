@@ -8,7 +8,7 @@ import torch
 # from models.experimental import attempt_load
 # #from utils.plots import plot_one_box
 import os
-import  run,main
+from detect import  run,main
 
 app = Flask(__name__)
 
