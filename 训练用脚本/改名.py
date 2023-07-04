@@ -2,7 +2,7 @@ import os
 class BatchRename():
 
     def __init__(self):
-        self.path = 'D:/learn/trywork/python/HOK/val1'  # 图片的路径
+        self.path = 'D:/learn/trywork/python/HOK/practise 2'  # 图片的路径
 
     def rename(self):
         filelist = os.listdir(self.path)
