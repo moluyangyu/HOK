@@ -3,7 +3,7 @@
 # python train.py --batch 32 --cfg yolov5m6.yaml --weights '' --data coco.yaml --img 1280 --epochs 300
 # See tutorials for hyperparameter evolution https://github.com/ultralytics/yolov5#tutorials
 
-lr0: 0.032  #学习率
+lr0: 0.0032  #学习率
 lrf: 0.12    # 余弦退火超参数
 momentum: 0.843  # 学习率动量
 weight_decay: 0.00036  # 权重衰减系数
