@@ -17,6 +17,7 @@ obj: 0.301  # 有无物体损失的系数
 obj_pw: 0.911  # 有无物体BCELoss中正样本的权重
 iou_t: 0.2    # 标签与anchors的iou阈值iou training threshold
 anchor_t: 2.91  # 标签的长h宽w/anchor的长h_a宽w_a阈值, 即h/h_a, w/w_a都要在(1/2.91, 2.91)之间anchor-multiple threshold
+copy_paste: 0.0
 # anchors: 3.63
 # 下面是一些数据增强的系数, 包括颜色空间和图片空间
 fl_gamma: 0.0
