@@ -14,7 +14,7 @@ python val.py --data C:/Users/86135/Desktop/program/new/pythonAi/data.yaml --wei
 
 该命令用于验证模型效果，所有参数需要自己调整
 
-python detect.py --data C:/Users/86135/Desktop/program/new/pythonAi/data.yaml --cfg C:/Users/86135/AppData/Local/Programs/Python/Python311/yolov5/models/yolov5s.yaml --weights C:/Users/86135/Desktop/program/new/pythonAi/yolov5s_train21/weights/best.pt
+python detect.py --data C:/Users/86135/Desktop/program/new/pythonAi/data.yaml  --weights C:/Users/86135/Desktop/program/new/pythonAi/yolov5s_train21/weights/best.pt
 
 该命令用于模型对图片推理，所有参数需要自己调整
 
