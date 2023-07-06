@@ -4,9 +4,9 @@
 # See tutorials for hyperparameter evolution https://github.com/ultralytics/yolov5#tutorials
 
 lr0: 0.0032  #学习率
-lrf: 0.12    # 余弦退火超参数
-momentum: 0.843  # 学习率动量
-weight_decay: 0.00036  # 权重衰减系数
+lrf: 0.13    # 余弦退火超参数
+momentum: 0.820  # 学习率动量
+weight_decay: 0.00056  # 权重衰减系数
 warmup_epochs: 2.0  #预热学习epoch
 warmup_momentum: 0.5 #预热学习率动量
 warmup_bias_lr: 0.05 #预热学习率
@@ -22,7 +22,7 @@ copy_paste: 0.0
 # 下面是一些数据增强的系数, 包括颜色空间和图片空间
 fl_gamma: 0.0
 hsv_h: 0.0138  # 色调
-hsv_s: 0.664   # 饱和度
+hsv_s: 0.568   # 饱和度
 hsv_v: 0.464   # 明度
 degrees: 0.373 #旋转角度
 translate: 0.245  # 水平和垂直平移
