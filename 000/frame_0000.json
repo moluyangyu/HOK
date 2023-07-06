@@ -6,75 +6,51 @@
       "label": "马可波罗",
       "points": [
         [
-          1573.75,
-          559.5
+          1393.75,
+          468.25
         ],
         [
-          1510.0,
-          418.25
-        ],
+          1467.5,
+          545.75
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "马可波罗",
+      "points": [
         [
-          1640.0,
-          382.0
+          1536.25,
+          415.75
         ],
         [
           1641.25,
-          519.5
+          527.0
         ]
       ],
       "group_id": null,
       "description": "",
-      "shape_type": "polygon",
+      "shape_type": "rectangle",
       "flags": {}
     },
     {
       "label": "马可波罗",
       "points": [
         [
-          1416.25,
-          544.5
+          1702.5,
+          458.25
         ],
         [
-          1346.25,
-          449.5
-        ],
-        [
-          1435.0,
-          424.5
-        ],
-        [
-          1502.5,
-          532.0
+          1800.0,
+          543.25
         ]
       ],
       "group_id": null,
       "description": "",
-      "shape_type": "polygon",
-      "flags": {}
-    },
-    {
-      "label": "马可波罗",
-      "points": [
-        [
-          1737.5,
-          547.0
-        ],
-        [
-          1683.75,
-          455.75
-        ],
-        [
-          1790.0,
-          428.25
-        ],
-        [
-          1805.0,
-          550.75
-        ]
-      ],
-      "group_id": null,
-      "description": "",
-      "shape_type": "polygon",
+      "shape_type": "rectangle",
       "flags": {}
     }
   ],

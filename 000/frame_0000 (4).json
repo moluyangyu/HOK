@@ -6,25 +6,34 @@
       "label": "周瑜",
       "points": [
         [
-          1940.625,
-          700.9375
+          907.8125,
+          132.18750000000003
         ],
         [
-          1884.375,
-          474.375
-        ],
-        [
-          2121.875,
-          521.25
-        ],
-        [
-          2039.0625,
-          716.5625
+          1071.875,
+          261.875
         ]
       ],
       "group_id": null,
       "description": "",
-      "shape_type": "polygon",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "周瑜",
+      "points": [
+        [
+          1917.1875,
+          524.375
+        ],
+        [
+          2064.0625,
+          666.5625
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
       "flags": {}
     }
   ],
