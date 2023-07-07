@@ -48,7 +48,7 @@ def hello_world():
     img_stream = return_img_stream(img_path) #获取图片流
     return render_template('index.html', img_stream=img_stream)    #获取显示
 
-# 检测图片
+# 检测图片（yolov5）
 
 def parse_opt():
     parser = argparse.ArgumentParser()
