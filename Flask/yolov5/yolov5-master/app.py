@@ -19,7 +19,6 @@ def upload():                       #upload()：回调函数
     if request.method == 'POST': 
 
         # 获取上传的文件
-
         f = request.files['file']  #函数：作用就是获取前端名为 'file'的文件信息
         global filename  # 定义全局变量
         filename = f.filename  # 获取前端上传图片名字
@@ -34,7 +33,6 @@ def upload():                       #upload()：回调函数
 
 # 检测结果显示
 def return_img_stream(img_local_path):
-
     import base64   #导入base64模块，用于编码图片数据
     img_stream = ''   #创建一个空字符串变量img_stream，用于存储图片流数据。
     with open(img_local_path, 'rb') as img_f:   #打开指定路径的图片文件，使用二进制读取模式（'rb'）
@@ -52,7 +50,6 @@ def hello_world():
 
 def parse_opt():
     parser = argparse.ArgumentParser()
-
     parser.add_argument('--weights', nargs='+', type=str, default= 'F:/github/HOK-1/Flask/yolov5/yolov5-master/models/yolov5s_train22/weights/best.pt', help='model path or triton URL')
     #parser.add_argument('--source', type=str, default=0, help='file/dir/URL/glob/screen/0(webcam)')
     parser.add_argument('--source', type=str, default= file_path, help='file/dir/URL/glob/screen/0(webcam)')
