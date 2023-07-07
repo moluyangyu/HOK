@@ -70,7 +70,7 @@ def hello_world():
 def parse_opt():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--weights', nargs='+', type=str, default= 'yolov5s.pt', help='model path or triton URL')
+    parser.add_argument('--weights', nargs='+', type=str, default= 'F:/github/HOK-1/Flask/yolov5/yolov5-master/models/yolov5s_train22/weights/best.pt', help='model path or triton URL')
     #parser.add_argument('--source', type=str, default=0, help='file/dir/URL/glob/screen/0(webcam)')
     parser.add_argument('--source', type=str, default= file_path, help='file/dir/URL/glob/screen/0(webcam)')
     parser.add_argument('--data', type=str, default= 'models/yolov5s.yaml', help='(optional) dataset.yaml path')
