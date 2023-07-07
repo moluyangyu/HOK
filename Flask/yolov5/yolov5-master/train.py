@@ -85,7 +85,7 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
 
     # Hyperparameters
     if isinstance(hyp, str):
-        with open(hyp, errors='ignore', encoding='utf-8') as f:
+        with open(hyp, errors='ignore') as f:
             hyp = yaml.safe_load(f)  # load hyps dict
     LOGGER.info(colorstr('hyperparameters: ') + ', '.join(f'{k}={v}' for k, v in hyp.items()))
     opt.hyp = hyp.copy()  # for saving hyps to checkpoints
@@ -452,7 +452,7 @@ def parse_opt(known=False):
     parser.add_argument('--resume', nargs='?', const=True, default=False, help='resume most recent training')
     parser.add_argument('--nosave', action='store_true', help='only save final checkpoint')
     parser.add_argument('--noval', action='store_true', help='only validate final epoch')
-    parser.add_argument('--noautoanchor', action='store_false', help='disable AutoAnchor')
+    parser.add_argument('--noautoanchor', action='store_true', help='disable AutoAnchor')
     parser.add_argument('--noplots', action='store_true', help='save no plot files')
     parser.add_argument('--evolve', type=int, nargs='?', const=300, help='evolve hyperparameters for x generations')
     parser.add_argument('--bucket', type=str, default='', help='gsutil bucket')
@@ -498,7 +498,7 @@ def main(opt, callbacks=Callbacks()):
         opt_yaml = last.parent.parent / 'opt.yaml'  # train options yaml
         opt_data = opt.data  # original dataset
         if opt_yaml.is_file():
-            with open(opt_yaml, errors='ignore',encoding='utf-8') as f:
+            with open(opt_yaml, errors='ignore') as f:
                 d = yaml.safe_load(f)
         else:
             d = torch.load(last, map_location='cpu')['opt']
@@ -569,7 +569,7 @@ def main(opt, callbacks=Callbacks()):
             'mixup': (1, 0.0, 1.0),  # image mixup (probability)
             'copy_paste': (1, 0.0, 1.0)}  # segment copy-paste (probability)
 
-        with open(opt.hyp, errors='ignore',encoding='utf-8') as f:
+        with open(opt.hyp, errors='ignore') as f:
             hyp = yaml.safe_load(f)  # load hyps dict
             if 'anchors' not in hyp:  # anchors commented in hyp.yaml
                 hyp['anchors'] = 3
@@ -584,7 +584,7 @@ def main(opt, callbacks=Callbacks()):
                 'gsutil',
                 'cp',
                 f'gs://{opt.bucket}/evolve.csv',
-                str(evolve_csv),])
+                str(evolve_csv), ])
 
         for _ in range(opt.evolve):  # generations to evolve
             if evolve_csv.exists():  # if evolve.csv exists: select best hyps and mutate
