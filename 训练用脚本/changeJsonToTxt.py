@@ -41,9 +41,9 @@ def convert_labelme_to_yolov5(json_path):
     return annotations
 
 # 处理指定文件夹内的所有JSON文件
-json_folder = 'C:/Users/86135/Documents/Tencent Files/985286227/FileRecv/123'  # 替换为包含JSON文件的文件夹路径
-image_folder = 'C:/Users/86135/Documents/Tencent Files/985286227/FileRecv/123'  # 替换为与JSON文件对应的图像文件夹路径
-output_folder = 'C:/Users/86135/Documents/Tencent Files/985286227/FileRecv/123'  # 替换为要保存TXT文件的文件夹路径
+json_folder = 'D:/learn/trywork/python/HOK/val2'  # 替换为包含JSON文件的文件夹路径
+image_folder = 'D:/learn/trywork/python/HOK/val2'  # 替换为与JSON文件对应的图像文件夹路径
+output_folder = 'D:/learn/trywork/python/HOK/val2'  # 替换为要保存TXT文件的文件夹路径
 
 json_files = [f for f in os.listdir(json_folder) if f.endswith('.json')]
 
