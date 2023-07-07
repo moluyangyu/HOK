@@ -32,11 +32,11 @@ for h in hero_list_resp.json():
 
     #发送请求
     for i,n in enumerate(names):
-        #resp = requests.get(f'http://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/{ename}/{ename}-bigskin-{i+1}.jpg')
+        resp = requests.get(f'http://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/{ename}/{ename}-bigskin-{i+1}.jpg')
         #接收服务器响应的图片（皮肤）
         #保存图片（皮肤）
-        #with open(f'train/{n}.jpg','wb') as f:
-            #f.write(resp.content)
+        with open(f'train/{n}.jpg','wb') as f:
+            f.write(resp.content)
         print(f'已下载:{n}的皮肤')
         #sleep(1)
     print(cnames)
