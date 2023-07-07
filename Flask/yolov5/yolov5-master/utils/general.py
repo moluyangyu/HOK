@@ -139,12 +139,12 @@ def set_logging(name=LOGGING_NAME, verbose=True):
             name: {
                 'class': 'logging.StreamHandler',
                 'formatter': name,
-                'level': level,}},
+                'level': level, }},
         'loggers': {
             name: {
                 'level': level,
                 'handlers': [name],
-                'propagate': False,}}})
+                'propagate': False, }}})
 
 
 set_logging(LOGGING_NAME)  # run before defining LOGGER
@@ -416,7 +416,7 @@ def check_imshow(warn=False):
         return False
 
 
-def check_suffix(file='yolov5s.pt', suffix=('.pt',), msg=''):
+def check_suffix(file='yolov5s.pt', suffix=('.pt', ), msg=''):
     # Check file(s) for acceptable suffix
     if file and suffix:
         if isinstance(suffix, str):
@@ -482,8 +482,7 @@ def check_dataset(data, autodownload=True):
 
     # Read yaml (optional)
     if isinstance(data, (str, Path)):
-        with open(data,errors='ignore',encoding='UTF-8') as f:
-            data = yaml.safe_load(f)  # dictionary
+        data = yaml_load(data)  # dictionary
 
     # Checks
     for k in 'train', 'val', 'names':

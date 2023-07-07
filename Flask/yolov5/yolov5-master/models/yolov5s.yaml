@@ -1,8 +1,8 @@
-# YOLOv5  by Ultralytics, AGPL-3.0 license
+# YOLOv5 🚀 by Ultralytics, AGPL-3.0 license
 
 # Parameters
-nc: 109  # number of classes
-depth_multiple: 0.34  # model depth multiple
+nc: 80  # number of classes
+depth_multiple: 0.33  # model depth multiple
 width_multiple: 0.50  # layer channel multiple
 anchors:
   - [10,13, 16,30, 33,23]  # P3/8

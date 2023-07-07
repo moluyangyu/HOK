@@ -61,16 +61,23 @@ def return_img_stream(img_local_path):
 @app.route('/sh', methods=['GET', 'POST'])  #定义新路由，显示图片
 def hello_world():
     #图片路径，推理完之后，默认保存的就是runs\\detect\\exp，这里加上filename，是变成完整的图片路径，然后才能获取显示
-    img_path = 'runs\\detect\\exp\\' + str(filename)  
+    img_path = 'runs\\detect\\exp' + str(filename) +"\\"+  str(filename)
     img_stream = return_img_stream(img_path) #获取图片流
     return render_template('index.html', img_stream=img_stream)
+
+
+
+
+
+
+
 
 # 检测图片的
 
 def parse_opt():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--weights', nargs='+', type=str, default= 'yolov5s.pt', help='model path or triton URL')
+    parser.add_argument('--weights', nargs='+', type=str, default= 'F:/github/HOK-1/Flask/yolov5/yolov5-master/models/yolov5s_train22/weights/best.pt', help='model path or triton URL')
     #parser.add_argument('--source', type=str, default=0, help='file/dir/URL/glob/screen/0(webcam)')
     parser.add_argument('--source', type=str, default= file_path, help='file/dir/URL/glob/screen/0(webcam)')
     parser.add_argument('--data', type=str, default= 'models/yolov5s.yaml', help='(optional) dataset.yaml path')
@@ -80,7 +87,7 @@ def parse_opt():
     parser.add_argument('--max-det', type=int, default=1000, help='maximum detections per image')
     parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
     parser.add_argument('--project', default= 'runs/detect', help='save results to project/name')
-    parser.add_argument('--name', default='exp', help='save results to project/name')
+    parser.add_argument('--name', default='exp' + str(filename)  , help='save results to project/name')
     parser.add_argument('--exist-ok', action='store_true', help='existing project/name ok, do not increment')
     parser.add_argument('--vid-stride', type=int, default=1, help='video frame-rate stride')
     opt = parser.parse_args()
