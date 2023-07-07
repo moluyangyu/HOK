@@ -3,16 +3,16 @@
 # python train.py --batch 32 --cfg yolov5m6.yaml --weights '' --data coco.yaml --img 1280 --epochs 300
 # See tutorials for hyperparameter evolution https://github.com/ultralytics/yolov5#tutorials
 
-lr0: 0.0032  #学习率
+lr0: 0.0052  #学习率
 lrf: 0.13    # 余弦退火超参数
 momentum: 0.820  # 学习率动量
-weight_decay: 0.00056  # 权重衰减系数
+weight_decay: 0.00050  # 权重衰减系数
 warmup_epochs: 2.0  #预热学习epoch
 warmup_momentum: 0.5 #预热学习率动量
 warmup_bias_lr: 0.05 #预热学习率
 box: 0.0296  # giou损失的系数
 cls: 0.243  # 分类损失的系数
-cls_pw: 0.631 #分类BCELoss中正样本的权重
+cls_pw: 0.641 #分类BCELoss中正样本的权重
 obj: 0.301  # 有无物体损失的系数
 obj_pw: 0.911  # 有无物体BCELoss中正样本的权重
 iou_t: 0.2    # 标签与anchors的iou阈值iou training threshold

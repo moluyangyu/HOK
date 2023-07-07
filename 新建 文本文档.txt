@@ -1,4 +1,5 @@
-# python train.py --device 0 --img-size 512 --batch-size 24 --epochs 400 --data C:/Users/86135/Desktop/data.yaml  --weights C:/Users/86135/Desktop/program/new/pythonAi/yolov5s_train20/weights/best.pt  --cfg C:/Users/86135/AppData/Local/Programs/Python/Python311/yolov5/models/yolov5s.yaml --name C:/Users/86135/Desktop/program/new/pythonAi/yolov5s_train
+# python train.py --device 0 --img-size 512 --batch-size 32 --epochs 30 --data D:/learn/trywork/python/HOK/model/data.yaml --cfg D:/learn/trywork/python/HOK/Flask/yolov5/yolov5-master/models/yolov5s.yaml --name C:/Users/86135/Desktop/program/new/pythonAi/yolov5s_train --weights C:/Users/86135/Desktop/program/new/pythonAi/yolov5s_train8/weights/best.pt
+--hyp D:/learn/trywork/python/HOK/model/hyp.yaml
 #python val.py --data D:/learn/trywork/python/HOK/model/data.yaml --weights D:/learn/trywork/python/HOK/model/yolov5s_train22/weights/best.pt
 #python detect.py --data D:/learn/trywork/python/HOK/model/data.yaml  --weights D:/learn/trywork/python/HOK/model/yolov5s_train22/weights/best.pt --device 0
 
